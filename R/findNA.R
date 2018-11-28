@@ -1,5 +1,5 @@
 
-### findNA (ChemoSpec2D only)
+### findNA (ChemoSpec2D only, but sumSpectra.Spectra2D requires this)
 
 #'
 #'
@@ -26,6 +26,8 @@
 
 .findNA <- function(spectra, retFreq = FALSE) {
 
+	.chkArgs(mode = 0L)
+	
 	M <- spectra$data[[1]] # All spectra are assumed to have the same set of NAs
 	                       # This is verified by chkSpectra2D
 	
