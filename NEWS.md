@@ -1,4 +1,19 @@
 
+# ChemoSpecUtils 0.2.xx 2018-12-xx
+## Bug Fixes
+* `updateGroups` now reports the old groups if `new.grps = NULL`, as intended and claimed in the documentation.
+
+## Bug Fixes
+* `plotScree` now knows what to do with class `princomp`.
+
+# ChemoSpecUtils 0.2.197 2018-12-02
+## Bug Fixes
+* More changes to `.chkArgs` since errors were introduced via the most recent "fix"!  Updated unit tests for the function, but even more work should be done there.  Using `HandyStuff::examplePage` to look for errors and warnings.  None found.
+
+# ChemoSpecUtils 0.2.170 2018-11-28
+## Bug Fixes
+* Fixed a problem in `.chkArgs(mode = 13)` that was giving an error in `ChemoSpec::r_pcaSpectra`.
+
 # ChemoSpecUtils 0.2.163 2018-11-28
 ## Improvements
 * Added function `updateGroups`.
