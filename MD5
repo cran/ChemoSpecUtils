@@ -1,6 +1,6 @@
-53e83291256025ac5665728cf5612f66 *DESCRIPTION
+5f7b15a19ea09a69923d76899fb74953 *DESCRIPTION
 c787b97bef3d778120eba27f6ca38f07 *NAMESPACE
-f15d3d38b2c3b72aa719e15c5482fb61 *NEWS.md
+08fe077866fc39c3a179db781e5293f6 *NEWS.md
 28994b7f1a310beb895bcfa1aa0bf7a5 *R/ChemoSpecUtils-package.R
 21fd0b190eb79eec4683d61bf99950a2 *R/addEllipseInfo.R
 cf87f6590cf94b6164624d56735d258f *R/addLegend.R
@@ -9,7 +9,7 @@ dcc20614f8081abd455b9506eef02d4a *R/addMethod.R
 ac76dc8240c83451bc9c84f3164e7377 *R/chkArgs.R
 44526dd0988015524b5720a7f8376ca6 *R/chkSpectra.R
 d359786334c7a7f480e5b058ad8c8791 *R/chkSpectra.Spectra.R
-1f142f18c4fc347b630ebf761848a3ed *R/chkSpectra.Spectra2D.R
+9fe5edb2e2f0d1cb917a5dc00677048e *R/chkSpectra.Spectra2D.R
 f2aada00004969370b4cec4650020b3a *R/colLeaf.R
 66d006ed90d6369fc39a82e3c5973c0c *R/computeEllipses.R
 1ca628e901ff9e42077f2d8e5e38d930 *R/drawEllipses.R
@@ -29,7 +29,7 @@ d6dad924bc82ee6fc65d0743b0c175ec *R/plotScores.Spectra2D.R
 bb6f4c0a8c0534dc5db9624c1ebd3e8c *R/plotScree.R
 798ce33e142c43eb6875c2e5e6b12130 *R/plotScree.default.R
 42ee2c64874752e9c6a751b17e8bc93f *R/plotScree.mia.R
-44018272b7bc10b6c7ebb7d61cba7808 *R/remGrpSam.R
+637b70ee44ea021355abcc4d7b23c52b *R/remGrpSam.R
 3e33ee1c1ddc6047f4e51a34f4b26b94 *R/removeFreq.R
 fdc09448be961c238d3adf82a9f50277 *R/removeFreq.Spectra.R
 7f95346d43b5fbb60effe4177839bb02 *R/removeFreq.Spectra2D.R
@@ -39,7 +39,7 @@ f69eec603124f08ddae2227c6ff2d6dd *R/removeGroup.Spectra2D.R
 3c994f3e035d19b7d1d08feb4ad2eac0 *R/removeSample.R
 91fdca1d8315b98148deae4eae839d8f *R/removeSample.Spectra.R
 2883a6f45f4bf2189a3b33c5391169ac *R/removeSample.Spectra2D.R
-514b554e12220621ffb56bf609dd4740 *R/rowDist.R
+03699f9bf5f6b670084ab041928851d0 *R/rowDist.R
 2a7abb8f618e030e4a3e7c81c3c5f238 *R/scorePlot.R
 e4043fc2005a25e4963c7e0e2033cc99 *R/shrinkLeaf.R
 2e123bbb95aa6b289d5f534ca88f1e80 *R/sumGroups.R
