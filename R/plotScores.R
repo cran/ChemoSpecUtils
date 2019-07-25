@@ -13,13 +13,13 @@
 #' \itemize{
 #'   \item An object of class \code{\link{prcomp}}, created by \code{ChemoSpec} functions
 #'   \code{\link[ChemoSpec]{c_pcaSpectra}}, \code{\link[ChemoSpec]{r_pcaSpectra}}
-#'   \code{irlba_pcaSpectra} or \code{s_pcaSpectra}.
+#'   \code{\link[ChemoSpec]{irlba_pcaSpectra}} or \code{\link[ChemoSpec]{s_pcaSpectra}}.
 #' \item An object of class \code{mia} produced by
 #'  function \code{\link[ChemoSpec2D]{miaSpectra2D}}.
 #' \item An object of class \code{parafac} produced by
 #'  function \code{\link[ChemoSpec2D]{pfacSpectra2D}}.
 #' \item An object of class \code{pop} produced by
-#'  function \code{popSpectra2D}.
+#'  function \code{\link[ChemoSpec2D]{popSpectra2D}}.
 #' }
 #' Any of the above score objects will have been modified to include a
 #' list element called \code{$method}, a character string describing the
@@ -29,7 +29,7 @@
 #' @param pcs A vector of two integers specifying the components (scores) to plot.
 #'
 #' @param ellipse A character vector specifying the type of ellipses to be
-#' plotted.  One of \code{c("both", "none", "cls", "rob")}.  \code{cls}
+#' plotted.  One of \code{c("both"}, \code{"none"}, \code{"cls"}, \code{"rob")}.  \code{cls}
 #' specifies classical confidence ellipses, \code{rob} specifies robust
 #' confidence ellipses.  An ellipse is drawn for each group unless there
 #' are three or fewer samples in the group.
@@ -55,7 +55,6 @@
 #' @export
 #' 
 #' @examples
-#' \dontrun{
 #' if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
 #'   library("ChemoSpec")
 #'   data(metMUD1)
@@ -75,7 +74,6 @@
 #'   set.seed(123)
 #'   res <- pfacSpectra2D(MUD1, parallel = FALSE, nfac = 2)
 #'   plotScores(MUD1, res, tol = 0.1, leg.loc = "bottomright", main = "PARAFAC Score Plot")
-#' }
 #' }
 #'
 plotScores <- function(spectra, so,

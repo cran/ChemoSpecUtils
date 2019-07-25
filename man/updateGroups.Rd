@@ -26,12 +26,11 @@ A convenience function that can be used to update (change)
 group names.  The default group names come from the \code{gr.crit}
 argument in the import functions \code{\link[ChemoSpec]{files2SpectraObject}},
 \code{\link[ChemoSpec]{matrix2SpectraObject}} or
-\code{files2Spectra2DObject}. In some cases \code{gr.crit}
+\code{\link[ChemoSpec2D]{files2Spectra2DObject}}. In some cases \code{gr.crit}
 may have complex regex patterns, and this function makes updating them to more
 appropriate/more readible strings easier.
 }
 \examples{
-\dontrun{
 if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
   library("ChemoSpec")
   data(metMUD1)
@@ -43,7 +42,6 @@ if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
   library("ChemoSpec2D")
   data(MUD1)
   MUD1a <- updateGroups(MUD1, new.grps = c("control", "treatment"))
-}
 }
 
 }
