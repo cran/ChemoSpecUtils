@@ -8,17 +8,34 @@
 #' @param vers Character. The minimum acceptable version of the package.  Will only be checked
 #'        to the major.minor level.
 #'
-#' @return If successful, \code{TRUE} is return invisibly.  Stops if there is a problem.
+#' @return If the package with the required version or higher is available, \code{TRUE} is returned
+#'         invisibly.  Otherwise \code{FALSE} is returned.
 #'
+#' @template authors-BH
 #' @export
+#'
+#' @tests tinytest
+#'
+#' # helper function
+#' mmVers <- function(string) {
+#'   mm <- sub("-.+", "", string) # remove anything beyond a "-"
+#'   mm <- sub("([0-9]+\\.[0-9]+)\\..*", "\\1", mm)
+#'   as.numeric(mm)
+#' }
+#'
+#' expect_equal(mmVers(mmVers("0.3.55")), 0.3)
+#' expect_equal(mmVers(mmVers("0.99-20180627")), 0.99)
+#'
+#' # get the installed version of pkg guaranteed to be available
+#' ivers <- mmVers(getNamespaceVersion("utils"))
+#' expect_true(checkForPackageWithVersion("utils", ivers - 0.1))
+#' expect_true(checkForPackageWithVersion("utils", ivers))
+#' expect_false(checkForPackageWithVersion("utils", ivers + 0.1))
 #'
 checkForPackageWithVersion <- function(pkg, vers) {
   if (!is.character(pkg)) stop("pkg must be a character string")
-  if (!is.character(vers)) stop("vers must be a character string")
-  msg <- paste("You must install package", pkg,
-    "with version", vers, "or newer to use this function",
-    sep = " "
-  )
+  vers <- as.character(vers)
+  ans <- NULL
 
   # Helper function
   # We will only check major.minor versions and ignore anything beyond that
@@ -28,22 +45,19 @@ checkForPackageWithVersion <- function(pkg, vers) {
     mm <- sub("([0-9]+\\.[0-9]+)\\..*", "\\1", mm)
     as.numeric(mm)
   }
-  # tests:
-  # mmVers("0.3.55")
-  # mmVers("0.99-20180627")
 
   # Check to see if *any* version of the package is installed
-  if (!requireNamespace(pkg, quietly = TRUE)) {
-    stop(msg)
-  }
-
-  # Check to see if the existing version matches vers or newer
-  if (requireNamespace(pkg, quietly = TRUE)) {
+  inst <- requireNamespace(pkg, quietly = TRUE)
+  if (!inst) ans <- FALSE
+ 
+  # Check to see if the installed version matches vers or newer
+  if (inst) {
     installedVers <- mmVers(getNamespaceVersion(pkg))
-    if (installedVers < mmVers(vers)) {
-      stop(msg)
-    }
+    good <- installedVers >= mmVers(vers)
+    if (good) ans <- TRUE
+    if (!good) ans <- FALSE
   }
 
-  invisible(TRUE)
+  if (is.null(ans)) stop("Could not determine if package '", pkg, "' is installed")
+  invisible(ans)
 }

@@ -22,17 +22,19 @@
 #' @return spectra An updated object of S3 class \code{\link[ChemoSpec]{Spectra}} or
 #' \code{\link[ChemoSpec2D]{Spectra2D}}.
 #'
+#' @template authors-BH
+#'
 #' @export
 #'
 #' @examples
-#' if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+#' if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
 #'   library("ChemoSpec")
 #'   data(metMUD1)
 #'   metMUD1a <- updateGroups(metMUD1) # reports old groups
 #'   metMUD1a <- updateGroups(metMUD1, new.grps = c("C", "T"))
 #' }
 #'
-#' if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+#' if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
 #'   library("ChemoSpec2D")
 #'   data(MUD1)
 #'   MUD1a <- updateGroups(MUD1, new.grps = c("control", "treatment"))

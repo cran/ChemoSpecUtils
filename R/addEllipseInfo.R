@@ -1,10 +1,10 @@
 #'
 #' Add Info About Ellipses to Plot
 #'
+#' @template authors-BH
 #' @export
 #' @noRd
 #' @importFrom graphics legend
-#' @importFrom plyr dlply llply m_ply
 #
 
 .addEllipseInfo <- function(ellipse) {

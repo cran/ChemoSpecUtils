@@ -21,14 +21,14 @@
 #'
 #' @return An object of S3 class \code{\link[ChemoSpec]{Spectra}} or \code{\link[ChemoSpec2D]{Spectra2D}}.
 #'
-#' @author Bryan A. Hanson, DePauw University.
+#' @template authors-BH
 #'
 #' @keywords utilities
 #'
 #' @export
 #'
 #' @examples
-#' if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+#' if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
 #'   library("ChemoSpec")
 #'   data(SrE.IR)
 #'
@@ -42,7 +42,7 @@
 #'   SrE.IRb$names
 #' }
 #'
-#' if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+#' if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
 #'   library("ChemoSpec2D")
 #'   data(MUD1)
 #'

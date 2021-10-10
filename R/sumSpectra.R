@@ -22,20 +22,20 @@
 #'
 #' @return None.  Results printed at console.
 #'
-#' @author Bryan A. Hanson, DePauw University.
+#' @template authors-BH
 #'
 #' @keywords utilities
 #'
 #' @export
 #'
 #' @examples
-#' if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+#' if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
 #'   library("ChemoSpec")
 #'   data(SrE.IR)
 #'   sumSpectra(SrE.IR)
 #' }
 #'
-#' if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+#' if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
 #'   library("ChemoSpec2D")
 #'   data(MUD1)
 #'   sumSpectra(MUD1)

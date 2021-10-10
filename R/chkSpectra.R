@@ -22,7 +22,7 @@
 #' written unless \code{confirm = TRUE}.  At the console, if there is a
 #' problem, messages are issued regardless of the value of \code{confirm}.
 #'
-#' @author Bryan A. Hanson, DePauw University.
+#' @template authors-BH
 #'
 #' @keywords classes utilities
 #'
@@ -30,13 +30,13 @@
 #' @importFrom utils str
 #'
 #' @examples
-#' if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+#' if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
 #'   library("ChemoSpec")
 #'   data(SrE.IR)
 #'   chkSpectra(SrE.IR)
 #' }
 #'
-#' if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+#' if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
 #'   library("ChemoSpec2D")
 #'   data(MUD1)
 #'   chkSpectra(MUD1)

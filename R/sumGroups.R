@@ -15,7 +15,7 @@
 #'  \item{symbol}{The symbol assigned to the group. \code{Spectra} objects only.}
 #'  \item{alt.symbol}{The alternative symbol assigned to the group. \code{Spectra} objects only.}
 #'
-#' @author Bryan A. Hanson, DePauw University.
+#' @template authors-BH
 #'
 #' @seealso To summarize the entire object, \code{\link{sumSpectra}}.
 #'
@@ -23,13 +23,13 @@
 #' @export
 #'
 #' @examples
-#' if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+#' if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
 #'   library("ChemoSpec")
 #'   data(SrE.IR)
 #'   sumGroups(SrE.IR)
 #' }
 #'
-#' if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+#' if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
 #'   library("ChemoSpec2D")
 #'   data(MUD1)
 #'   sumGroups(MUD1)

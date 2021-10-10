@@ -21,28 +21,30 @@
 #' plot desired (traditional or alternative).  \code{"trad"} is not supported
 #' for \code{mia} objects.
 #'
-#' @param \dots Additional parameters to be passed to plotting functions.
+#' @template param-graphics-dots
+#' @template param-graphics-return
 #'
-#' @return None.  Side effect is a plot.
-#'
-#' @author Bryan A. Hanson, DePauw University.
+#' @author Bryan A. Hanson (DePauw University), Tejasvi Gupta.
 #'
 #' @references The idea for the alternative style plot came from the NIR-Quimiometria
 #'  blog by jrcuesta, at \url{https://nir-quimiometria.blogspot.com/2012/02/pca-for-nir-spectrapart-004-projections.html}
 #'
 #' @keywords multivariate hplot
 #' @export
+#'
 #' @examples
-#' if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+#' if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
 #'   library("ChemoSpec")
 #'   data(metMUD1)
 #'
 #'   pca <- c_pcaSpectra(metMUD1)
-#'   plotScree(pca, style = "trad")
-#'   plotScree(pca, style = "alt")
+#'   p1 <- plotScree(pca, style = "trad")
+#'   p1
+#'   p2 <- plotScree(pca, style = "alt")
+#'   p2
 #' }
 #'
-#' if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+#' if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
 #'   library("ChemoSpec2D")
 #'   data(MUD1)
 #'

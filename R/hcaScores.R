@@ -44,7 +44,7 @@
 #' @return A list, containing an object of class \code{\link{hclust}} and an
 #' object of class \code{\link{dendrogram}}.  The side effect is a plot.
 #'
-#' @author Bryan A. Hanson, DePauw University.
+#' @template authors-BH
 #'
 #' @seealso \code{\link{hclust}} for the underlying function. See
 #' \code{\link[ChemoSpec]{hcaSpectra}} for HCA of the entire data set stored in the
@@ -54,7 +54,7 @@
 #' @export
 #'
 #' @examples
-#' if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+#' if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
 #'   library("ChemoSpec")
 #'   data(metMUD1)
 #'
@@ -62,7 +62,7 @@
 #'   hca <- hcaScores(metMUD1, pca, main = "metMUD1 NMR Data PCA Scores")
 #' }
 #'
-#' if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+#' if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
 #'   library("ChemoSpec2D")
 #'   data(MUD1)
 #'

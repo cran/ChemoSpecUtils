@@ -10,13 +10,13 @@
 #' @param use.sym Logical; if true, the color scheme is set to black and the
 #'   points plotted with symbols.  Applies only to \code{ChemoSpec}.
 #'
-#' @param leg.loc Character; Any string acceptable to \code{\link{legend}}.
+#' @template param-legloc
 #'
 #' @param \dots Additional parameters to be passed to the plotting functions.
 #'
 #' @return None.  Side effect is to modify an existing plot.
 #'
-#' @author Bryan A. Hanson, DePauw University.
+#' @template authors-BH
 #'
 #' @importFrom graphics legend
 #'

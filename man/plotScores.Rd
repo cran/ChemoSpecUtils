@@ -45,19 +45,31 @@ confidence ellipses.  An ellipse is drawn for each group unless there
 are three or fewer samples in the group.}
 
 \item{tol}{A number describing the fraction of points to be labeled.
-\code{tol = 1.0} labels all the points; \code{tol = 0.05} labels the most
-extreme 5 percent.  Set to \code{"none"} to completely suppress labels.}
+\code{tol = 1.0} labels all the points; \code{tol = 0.05} labels
+\emph{approximately} the most extreme 5 percent. Set to \code{"none"} to
+completely suppress labels. Note that a simple approach
+based upon quantiles is used, assumes that both x and y are each normally
+distributed, and treats x and y separately.  Thus, this is not a formal
+treatment of outliers, just a means of labeling points. Groups are lumped
+together.}
 
 \item{use.sym}{A logical; if TRUE, the color scheme is set to black and the
 points plotted with symbols.  Applies only to \code{\link[ChemoSpec]{Spectra}} objects.}
 
-\item{leg.loc}{Character; if \code{"none"} no legend will be drawn.
-Otherwise, any string acceptable to \code{\link{legend}}.}
+\item{leg.loc}{Either a list with elements \code{x} and \code{y}, or a string like
+\code{"topright"}.  Values in a list should be on \code{[0,1]}, i.e. the lower left of the plot
+area is \code{0,0} and the upper right is \code{1,1}.  String values are those described in 
+\code{\link[graphics]{legend}} under "Details". A value of \code{"none"} is acceptable as well.}
 
 \item{\dots}{Additional parameters to be passed to the plotting functions.}
 }
 \value{
-None.  Side effect is a plot.
+The returned value depends on the graphics option selected (see \code{\link{GraphicsOptions}}).
+\describe{
+ \item{base:}{None. Side effect is a plot.}
+ \item{ggplot2:}{The plot is displayed, and a \code{ggplot2} plot object is returned if the
+                 value is assigned. The plot can be modified in the usual \code{ggplot2} manner.}
+}
 }
 \description{
 Plots the requested scores using the color scheme derived from the
@@ -66,31 +78,37 @@ Options are provided to add confidence ellipses for each group in the object.
 The ellipses may be robust or classical.  Option to label the extreme points provided.
 }
 \examples{
-if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
   library("ChemoSpec")
+  # This example assumes the graphics output is set to ggplot2 (see ?GraphicsOptions).
+  library("ggplot2")
   data(metMUD1)
 
   pca <- c_pcaSpectra(metMUD1)
-  plotScores(metMUD1, pca,
-    main = "metMUD1 NMR Data",
-    pcs = c(1, 2), ellipse = "cls", tol = 0.05
-  )
+  p <- plotScores(metMUD1, pca, pcs = c(1, 2), ellipse = "cls", tol = 0.05)
+  p <- p + ggtitle("metMUD1 NMR Data")
+  p
 }
 
-if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
   library("ChemoSpec2D")
+  library("ggplot2")
   data(MUD1)
 
-  res <- miaSpectra2D(MUD1)
-  plotScores(MUD1, res, main = "MIA Scores", tol = 0.1, ellipse = "cls")
+  mia <- miaSpectra2D(MUD1)
+  p1 <- plotScores(MUD1, mia, tol = 0.1, ellipse = "cls")
+  p1 <- p1 + ggtitle("MIA Scores")
+  p1
 
   set.seed(123)
-  res <- pfacSpectra2D(MUD1, parallel = FALSE, nfac = 2)
-  plotScores(MUD1, res, tol = 0.1, leg.loc = "bottomright", main = "PARAFAC Score Plot")
+  pfac <- pfacSpectra2D(MUD1, parallel = FALSE, nfac = 2)
+  p2 <- plotScores(MUD1, pfac, tol = 0.1, leg.loc = "bottomright")
+  p2 <- p2 + ggtitle("PARAFAC Score Plot")
+  p2
 }
 }
 \author{
-Bryan A. Hanson, DePauw University.
+Bryan A. Hanson (DePauw University), Tejasvi Gupta.
 }
 \keyword{hplot}
 \keyword{multivariate}

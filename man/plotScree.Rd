@@ -23,10 +23,15 @@ were used to create \code{pca}.
 plot desired (traditional or alternative).  \code{"trad"} is not supported
 for \code{mia} objects.}
 
-\item{\dots}{Additional parameters to be passed to plotting functions.}
+\item{\dots}{Parameters to be passed to the plotting routines. \emph{Applies to base graphics only}.}
 }
 \value{
-None.  Side effect is a plot.
+The returned value depends on the graphics option selected (see \code{\link{GraphicsOptions}}).
+\describe{
+ \item{base:}{None. Side effect is a plot.}
+ \item{ggplot2:}{The plot is displayed, and a \code{ggplot2} plot object is returned if the
+                 value is assigned. The plot can be modified in the usual \code{ggplot2} manner.}
+}
 }
 \description{
 Functions that draw a traditional scree plot, or an alternative style that is perhaps
@@ -34,16 +39,18 @@ more informative.  These plots illustrate the variance explained by each compone
 in a PCA or MIA analysis.
 }
 \examples{
-if (checkForPackageWithVersion("ChemoSpec", "5.1")) {
+if (checkForPackageWithVersion("ChemoSpec", 6.0)) {
   library("ChemoSpec")
   data(metMUD1)
 
   pca <- c_pcaSpectra(metMUD1)
-  plotScree(pca, style = "trad")
-  plotScree(pca, style = "alt")
+  p1 <- plotScree(pca, style = "trad")
+  p1
+  p2 <- plotScree(pca, style = "alt")
+  p2
 }
 
-if (checkForPackageWithVersion("ChemoSpec2D", "0.3")) {
+if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
   library("ChemoSpec2D")
   data(MUD1)
 
@@ -56,7 +63,7 @@ The idea for the alternative style plot came from the NIR-Quimiometria
  blog by jrcuesta, at \url{https://nir-quimiometria.blogspot.com/2012/02/pca-for-nir-spectrapart-004-projections.html}
 }
 \author{
-Bryan A. Hanson, DePauw University.
+Bryan A. Hanson (DePauw University), Tejasvi Gupta.
 }
 \keyword{hplot}
 \keyword{multivariate}
