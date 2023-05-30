@@ -1,9 +1,18 @@
 #'
 #' Add Ellipses to Plot
 #'
-#' @template authors-BH
+#' *Internal function*.
+#'
+#' @param ELL Coordinates of the ellipse points.
+#' @param gr Group information.
+#' @param ellipse  Type of ellipse; one of `cls`, `rob` or `both`.
+#' @param use.sym  Logical.  Should symbols be used?  For this function, determines color of lines.
+#' @param \ldots `r .writeDoc_GraphicsDots()`
+#' @return None.  Side effect is a modified plot.
+#'
+#' @author `r .writeDoc_Authors("BH")`
 #' @export
-#' @noRd
+#' @keywords internal
 #' @importFrom graphics lines
 #'
 

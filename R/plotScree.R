@@ -21,10 +21,11 @@
 #' plot desired (traditional or alternative).  \code{"trad"} is not supported
 #' for \code{mia} objects.
 #'
-#' @template param-graphics-dots
-#' @template param-graphics-return
+#' @param \dots `r .writeDoc_GraphicsDots()`
 #'
-#' @author Bryan A. Hanson (DePauw University), Tejasvi Gupta.
+#' @return `r .writeDoc_GraphicsReturn()`
+#'
+#' @author `r .writeDoc_Authors(c("BH", "TG"))`
 #'
 #' @references The idea for the alternative style plot came from the NIR-Quimiometria
 #'  blog by jrcuesta, at \url{https://nir-quimiometria.blogspot.com/2012/02/pca-for-nir-spectrapart-004-projections.html}

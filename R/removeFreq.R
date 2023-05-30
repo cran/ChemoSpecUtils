@@ -8,8 +8,7 @@
 #' interfering peaks (e.g. the water peak in 1H NMR) or simply focus
 #' on a region of interest.
 #'
-#' @param spectra An object of S3 class \code{\link[ChemoSpec]{Spectra}} or
-#' \code{\link[ChemoSpec2D]{Spectra2D}} from which to remove frequencies.
+#' @param spectra `r .writeDoc_Spectra3()`
 #'
 #' @param rem.freq For a \code{Spectra} object, a vector of logicals.
 #' \code{rem.freq} can be any valid \code{R} statement that leads to a vector of
@@ -38,12 +37,11 @@
 #' analysis on the result, using the spectrum as an abstract object (that is, the
 #' spectrum may not plottable, but the resulting scores are still meaningful).
 #'
-#' @return An object of S3 class \code{\link[ChemoSpec]{Spectra}} or
-#' \code{\link[ChemoSpec2D]{Spectra2D}}.
+#' @return `r .writeDoc_Spectra3()`
 #'
 #' @seealso \code{\link[ChemoSpec2D]{removeFreq}} for another way to remove data.
 #'
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #'
 #' @keywords utilities
 #'
@@ -62,11 +60,11 @@
 #'
 #'   # Remove frequencies from both ends at once:
 #'   newIR <- removeFreq(SrE.IR, rem.freq = SrE.IR$freq > 3500
-#'   | SrE.IR$freq < 800)
+#'     | SrE.IR$freq < 800)
 #'
 #'   # Remove frequencies from the middle:
 #'   newIR <- removeFreq(SrE.IR, rem.freq = SrE.IR$freq > 800
-#'   & SrE.IR$freq < 1000)
+#'     & SrE.IR$freq < 1000)
 #'
 #'   # The logic of this last one is as follows.  Any values
 #'   # that are TRUE will be removed.

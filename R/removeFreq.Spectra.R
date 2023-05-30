@@ -1,7 +1,7 @@
 #'
 #' removeFreq.Spectra
 #'
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #' @noRd
 #' @export
 #'

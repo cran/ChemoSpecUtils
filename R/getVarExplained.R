@@ -1,9 +1,15 @@
 #'
 #' Compute the Variance Explained from PCA or Other Reduction Methods
 #'
-#' @template authors-BH
+#' *Internal function*.
+#'
+#' @param so A object returned by a data reduction method.
+#' 
+#' @return A vector giving the variance explained by each successive component.
+#'
+#' @author `r .writeDoc_Authors("BH")`
 #' @export
-#' @noRd
+#' @keywords internal
 #'
 .getVarExplained <- function(so) {
   found <- FALSE

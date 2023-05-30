@@ -7,8 +7,7 @@
 chkSpectra(spectra, confirm = FALSE)
 }
 \arguments{
-\item{spectra}{An object of S3 class \code{\link[ChemoSpec]{Spectra}} or
-\code{\link[ChemoSpec2D]{Spectra2D}}.}
+\item{spectra}{An object of S3 class \code{\link[ChemoSpec:Spectra]{ChemoSpec::Spectra()}} or \code{\link[ChemoSpec2D:Spectra2D]{ChemoSpec2D::Spectra2D()}}.}
 
 \item{confirm}{Logical indicating whether or not to write the results to the
 console, as would be desirable for interactive use.}
@@ -25,9 +24,9 @@ This function should be used after manual editing of these objects.
 However, in most cases rather than
 directly editing these objects, one should modify them via:
 \itemize{
-  \item {\code{\link{removeFreq}}}
-  \item {\code{\link{removeSample}}}
-  \item {\code{\link{removeGroup}}}
+\item {\code{\link{removeFreq}}}
+\item {\code{\link{removeSample}}}
+\item {\code{\link{removeGroup}}}
 }
 }
 \examples{
@@ -44,7 +43,7 @@ if (checkForPackageWithVersion("ChemoSpec2D", 0.5)) {
 }
 }
 \author{
-Bryan A. Hanson (DePauw University)
+Bryan A. Hanson (DePauw University).
 }
 \keyword{classes}
 \keyword{utilities}

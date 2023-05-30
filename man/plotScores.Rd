@@ -16,20 +16,19 @@ plotScores(
 )
 }
 \arguments{
-\item{spectra}{An object of S3 class \code{\link[ChemoSpec]{Spectra}}
-or \code{\link[ChemoSpec2D]{Spectra2D}} object.}
+\item{spectra}{An object of S3 class \code{\link[ChemoSpec:Spectra]{ChemoSpec::Spectra()}} or \code{\link[ChemoSpec2D:Spectra2D]{ChemoSpec2D::Spectra2D()}}.}
 
 \item{so}{"Score Object" One of the following:
 \itemize{
-  \item An object of class \code{\link{prcomp}}, created by \code{ChemoSpec} functions
-  \code{\link[ChemoSpec]{c_pcaSpectra}}, \code{\link[ChemoSpec]{r_pcaSpectra}},
-  \code{\link[ChemoSpec]{irlba_pcaSpectra}} or \code{\link[ChemoSpec]{s_pcaSpectra}}.
+\item An object of class \code{\link{prcomp}}, created by \code{ChemoSpec} functions
+\code{\link[ChemoSpec]{c_pcaSpectra}}, \code{\link[ChemoSpec]{r_pcaSpectra}},
+\code{\link[ChemoSpec]{irlba_pcaSpectra}} or \code{\link[ChemoSpec]{s_pcaSpectra}}.
 \item An object of class \code{mia} produced by
- function \code{\link[ChemoSpec2D]{miaSpectra2D}}.
+function \code{\link[ChemoSpec2D]{miaSpectra2D}}.
 \item An object of class \code{parafac} produced by
- function \code{\link[ChemoSpec2D]{pfacSpectra2D}}.
+function \code{\link[ChemoSpec2D]{pfacSpectra2D}}.
 \item An object of class \code{pop} produced by
- function \code{\link[ChemoSpec2D]{popSpectra2D}}.
+function \code{\link[ChemoSpec2D]{popSpectra2D}}.
 }
 Any of the above score objects will have been modified to include a
 list element called \code{$method}, a character string describing the
@@ -44,31 +43,20 @@ specifies classical confidence ellipses, \code{rob} specifies robust
 confidence ellipses.  An ellipse is drawn for each group unless there
 are three or fewer samples in the group.}
 
-\item{tol}{A number describing the fraction of points to be labeled.
-\code{tol = 1.0} labels all the points; \code{tol = 0.05} labels
-\emph{approximately} the most extreme 5 percent. Set to \code{"none"} to
-completely suppress labels. Note that a simple approach
-based upon quantiles is used, assumes that both x and y are each normally
-distributed, and treats x and y separately.  Thus, this is not a formal
-treatment of outliers, just a means of labeling points. Groups are lumped
-together.}
+\item{tol}{A number describing the fraction of points to be labeled. \code{tol = 1.0} labels all the points; \code{tol = 0.05} labels \emph{approximately} the most extreme 5 percent. Set to \code{'none'} to completely suppress labels. Note that a simple approach based upon quantiles is used, assumes that both x and y are each normally distributed, and treats x and y separately.  Thus, this is not a formal treatment of outliers, just a means of labeling points. Groups are lumped together for the computation.}
 
 \item{use.sym}{A logical; if TRUE, the color scheme is set to black and the
 points plotted with symbols.  Applies only to \code{\link[ChemoSpec]{Spectra}} objects.}
 
-\item{leg.loc}{Either a list with elements \code{x} and \code{y}, or a string like
-\code{"topright"}.  Values in a list should be on \code{[0,1]}, i.e. the lower left of the plot
-area is \code{0,0} and the upper right is \code{1,1}.  String values are those described in 
-\code{\link[graphics]{legend}} under "Details". A value of \code{"none"} is acceptable as well.}
+\item{leg.loc}{Either a list with elements \code{x} and \code{y}, or a string like \code{'topright'}.  Values in a list should be on \verb{[0,1]}, i.e. the lower left of the plot area is \verb{0,0} and the upper right is \verb{1,1}.  Allowed string values are those described in \code{\link[graphics:legend]{graphics::legend()}} under 'Details'. A value of \code{'none'} is acceptable as well.}
 
-\item{\dots}{Additional parameters to be passed to the plotting functions.}
+\item{\dots}{Parameters to be passed to the plotting routines. \emph{Applies to base graphics only}.}
 }
 \value{
-The returned value depends on the graphics option selected (see \code{\link{GraphicsOptions}}).
-\describe{
- \item{base:}{None. Side effect is a plot.}
- \item{ggplot2:}{The plot is displayed, and a \code{ggplot2} plot object is returned if the
-                 value is assigned. The plot can be modified in the usual \code{ggplot2} manner.}
+The returned value depends on the graphics option selected (see \code{\link[=GraphicsOptions]{GraphicsOptions()}}).
+\itemize{
+\item \code{base}: None.  Side effect is a plot.
+\item \code{ggplot2}: The plot is displayed, and a \code{ggplot2} object is returned if the value is assigned.  The plot can be modified in the usual \code{ggplot2} manner.
 }
 }
 \description{

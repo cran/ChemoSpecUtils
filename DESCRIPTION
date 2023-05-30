@@ -1,8 +1,8 @@
 Package: ChemoSpecUtils
 Type: Package
 Title: Functions Supporting Packages ChemoSpec and ChemoSpec2D
-Version: 1.0.2
-Date: 2022-12-04
+Version: 1.0.3
+Date: 2023-05-28
 Authors@R: c(
     person("Bryan A.", "Hanson",
     role = c("aut", "cre"), email =
@@ -10,7 +10,7 @@ Authors@R: c(
     comment = c(ORCID = "0000-0003-3536-8246")),
     person("Tejasvi", "Gupta",
       role = "ctb",
-      comment = "author of ggplot2 graphics"))
+      comment = "implemented ggplot2 graphics"))
 Description: Functions supporting the common needs of packages 'ChemoSpec' and 'ChemoSpec2D'.
 License: GPL-3
 Depends: R (>= 3.5)
@@ -23,11 +23,11 @@ URL: https://github.com/bryanhanson/ChemoSpecUtils
 BugReports: https://github.com/bryanhanson/ChemoSpecUtils/issues
 ByteCompile: TRUE
 Encoding: UTF-8
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2022-12-05 01:29:22 UTC; bryanhanson
+Packaged: 2023-05-29 01:14:34 UTC; bryanhanson
 Author: Bryan A. Hanson [aut, cre] (<https://orcid.org/0000-0003-3536-8246>),
-  Tejasvi Gupta [ctb] (author of ggplot2 graphics)
+  Tejasvi Gupta [ctb] (implemented ggplot2 graphics)
 Maintainer: Bryan A. Hanson <hanson@depauw.edu>
 Repository: CRAN
-Date/Publication: 2022-12-05 08:12:46 UTC
+Date/Publication: 2023-05-30 09:40:02 UTC

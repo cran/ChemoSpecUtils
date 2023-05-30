@@ -1,3 +1,8 @@
+# ChemoSpecUtils 1.0.3 2023-05-28
+## Misc.
+* At CRAN's request, made examples and test conditional on any packages in Suggests:.
+* Replaced uses of `@template` with inline functions (`@template` has been deprecated).
+
 # ChemoSpecUtils 1.0.1 2022-12-04
 ## Misc.
 * Rewrote `.drawEllipse` and `.scorePlot` to avoid use of the `plyr` package which is retired.

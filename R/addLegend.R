@@ -1,27 +1,24 @@
 #'
 #' Add a Legend to a Plot
 #'
-#' Add a legend to a plot created by either \code{ChemoSpec} or \code{ChemoSpec2D}.
+#' *Internal function*.  Add a legend to a plot created by either \code{ChemoSpec} or \code{ChemoSpec2D}.
 #' \code{ChemoSpec2D} does not use symbols.
 #'
-#' @param spectra An object of S3 class \code{\link[ChemoSpec]{Spectra}} or
-#' \code{\link[ChemoSpec2D]{Spectra2D}}.
+#' @param spectra `r .writeDoc_Spectra3()`
 #'
 #' @param use.sym Logical; if true, the color scheme is set to black and the
 #'   points plotted with symbols.  Applies only to \code{ChemoSpec}.
 #'
-#' @template param-legloc
+#' @param leg.loc `r .writeDoc_LegLoc()`
 #'
-#' @param \dots Additional parameters to be passed to the plotting functions.
+#' @param \dots `r .writeDoc_GraphicsDots()`
 #'
 #' @return None.  Side effect is to modify an existing plot.
 #'
-#' @template authors-BH
-#'
+#' @author `r .writeDoc_Authors("BH")`
 #' @importFrom graphics legend
-#'
 #' @export
-#' @noRd
+#' @keywords internal
 #'
 
 .addLegend <- function(spectra, leg.loc, use.sym, ...) {

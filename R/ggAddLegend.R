@@ -1,18 +1,18 @@
 #'
 #' Add Legend to a ggplot2 Plot
 #'
-#' This function creates a suitable legend and returns it as a set of grobs,
+#' *Internal function*. This function creates a suitable legend and returns it as a set of grobs,
 #' ready to be added to an existing plot.
 #'
-#' @param spectra An object of S3 class \code{\link{Spectra}}.
+#' @param spectra `r .writeDoc_Spectra1()`
 #' @param use.sym Logical specifying if symbols will be used or not.
 #' @param leg.loc A list giving x, y coordinates, and a reference point.
 #'
 #' @return A grob containing the legend.
 #'
-#' @author Bryan A. Hanson (DePauw University), Tejasvi Gupta.
+#' @author `r .writeDoc_Authors(c("BH", "TG"))`
 #' @export
-#' @noRd
+#' @keywords internal
 #' @importFrom grid textGrob gpar gTree gList pointsGrob unit
 #'
 .ggAddLegend <- function(spectra, use.sym, leg.loc) {

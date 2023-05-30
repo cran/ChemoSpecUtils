@@ -13,8 +13,7 @@
 #' beyond what is required.  If so, these extra elements are reported to the
 #' console.
 #'
-#' @param spectra An object of S3 class \code{\link[ChemoSpec]{Spectra}} or
-#' \code{\link[ChemoSpec2D]{Spectra2D}} whose group membership information is desired.
+#' @param spectra `r .writeDoc_Spectra3()`
 #'
 #' @param ...  Arguments to be passed downstream.  Main use is to pass a value for \code{tol}
 #'             to function \code{\link{check4Gaps}} when using \code{ChemoSpec}.
@@ -22,7 +21,7 @@
 #'
 #' @return None.  Results printed at console.
 #'
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #'
 #' @keywords utilities
 #'

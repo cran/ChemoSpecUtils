@@ -6,7 +6,7 @@
 #' Many methods for computing the clusters and distances are
 #' available.
 #'
-#' @param spectra An object of S3 class \code{\link[ChemoSpec]{Spectra}} or \code{\link[ChemoSpec2D]{Spectra2D}} object.
+#' @param spectra `r .writeDoc_Spectra3()`
 #'
 #' @param so "Score Object" One of the following:
 #' \itemize{
@@ -39,12 +39,12 @@
 #' @param leg.loc Character; if \code{"none"} no legend will be drawn.
 #' Otherwise, any string acceptable to \code{\link{legend}}.
 #'
-#' @param \dots Additional parameters to be passed to the plotting functions.
+#' @param \dots `r .writeDoc_GraphicsDots()`
 #'
 #' @return A list, containing an object of class \code{\link{hclust}} and an
 #' object of class \code{\link{dendrogram}}.  The side effect is a plot.
 #'
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #'
 #' @seealso \code{\link{hclust}} for the underlying function. See
 #' \code{\link[ChemoSpec]{hcaSpectra}} for HCA of the entire data set stored in the

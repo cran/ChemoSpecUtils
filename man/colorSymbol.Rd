@@ -40,14 +40,14 @@ are most readily distinguished can be found in Robinson: "Good Plot Symbols by D
 If the particular order of colors in any of these does not suit your needs, you can always
 choose the ones you want, and/or rearrange the order, or simply provide your own.
 \itemize{
-  \item The colors and symbols produced by \code{gr.cols = "auto"} in the import functions.
-  \item \code{Col8} provides eight unique colors.  These are more saturated
-        than the automatic colors.
-  \item \code{Col12} provides a mostly paired set of 12 unique colors suitable for groups
-        that come in pairs.
-  \item \code{Col7} provides seven color-blind friendly colors.  These can be visualized
-        at https://projects.susielu.com/viz-palette by using the hex codes obtained
-        by typing \code{data(Col7); Col7} in the \code{R} console. 
+\item The colors and symbols produced by \code{gr.cols = "auto"} in the import functions.
+\item \code{Col8} provides eight unique colors.  These are more saturated
+than the automatic colors.
+\item \code{Col12} provides a mostly paired set of 12 unique colors suitable for groups
+that come in pairs.
+\item \code{Col7} provides seven color-blind friendly colors.  These can be visualized
+at https://projects.susielu.com/viz-palette by using the hex codes obtained
+by typing \code{data(Col7); Col7} in the \code{R} console.
 }
 }
 \examples{
@@ -59,7 +59,10 @@ data(Col12)
 data(Sym12)
 data(Col8)
 data(Sym8)
-auto <- RColorBrewer::brewer.pal(8, "Set1")
+# You need to install package "RColorBrewer" to display the default color scheme
+if (requireNamespace("RColorBrewer", quietly = TRUE)) {
+  auto <- RColorBrewer::brewer.pal(8, "Set1")
+}
 
 sp <- 0.75 # space between major plot elements
 tsp <- 0.15 # additional space between points and color swatches/descriptive text
@@ -93,14 +96,16 @@ text(0.6, y + h + tsp * 2 + sp, adj = 0,
   labels = "gr.cols = 'Col8'     8 distinct colors/symbols"
 )
 
-# auto (original)
-for (i in 1:8) {
-  rect(i - 0.5, y + sp * 2, i + 0.5, y + sp * 2 + h, border = NA, col = auto[i])
+# auto (default)
+if (requireNamespace("RColorBrewer", quietly = TRUE)) {
+  for (i in 1:8) {
+    rect(i - 0.5, y + sp * 2, i + 0.5, y + sp * 2 + h, border = NA, col = auto[i])
+  }
+  points(1:8, rep(y + h + tsp + sp * 2, 8), pch = Sym8)
+  text(0.6, y + h + tsp * 2 + sp * 2, adj = 0,
+    labels = "gr.cols = 'auto'     8 distinct colors/symbols"
+  )
 }
-points(1:8, rep(y + h + tsp + sp * 2, 8), pch = Sym8)
-text(0.6, y + h + tsp * 2 + sp * 2, adj = 0,
-  labels = "gr.cols = 'auto'     8 distinct colors/symbols"
-)
 
 # colorblind-friendly
 for (i in 1:7) {
@@ -112,7 +117,7 @@ text(0.6, y + h + tsp * 2 + sp * 3, adj = 0,
 )
 }
 \author{
-Bryan A. Hanson (DePauw University)
+Bryan A. Hanson (DePauw University).
 }
 \keyword{color}
 \keyword{datasets}

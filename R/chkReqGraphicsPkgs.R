@@ -1,16 +1,15 @@
 #'
 #' Verify Required Graphics Packages are Available.
 #'
-#' @param pkgs Character. Vector of package names.  Each is checked for availability.
+#' *Internal function*.
 #'
+#' @param pkgs Character. Vector of package names.  Each is checked for availability.
 #' @return \code{NULL}, invisibly.
 #'
-#' @author Bryan A. Hanson (DePauw University), Tejasvi Gupta.
-#'
-#' @keywords utilities
-#' @noRd
+#' @author `r .writeDoc_Authors(c("BH", "TG"))`
 #' @export
-#'
+#' @keywords internal
+#' 
 .chkReqGraphicsPkgs <- function(pkgs) {
 
   if ("ggplot2" %in% pkgs) {

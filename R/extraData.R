@@ -1,9 +1,14 @@
 #'
 #' Check for Extra Data Appended to a Spectra or Spectra2D Object
 #'
-#' @template authors-BH
+#' *Internal function*.
+#'
+#' @param spectra `r .writeDoc_Spectra3()`
+#' @return.  Logical. `TRUE` if a mismatch was found for the data lengths.  Message are emited as well.
+#' 
+#' @author `r .writeDoc_Authors("BH")`
 #' @export
-#' @noRd
+#' @keywords internal
 #'
 .extraData <- function(spectra) {
   .chkArgs(mode = 0L)

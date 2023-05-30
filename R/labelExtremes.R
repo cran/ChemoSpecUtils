@@ -1,7 +1,7 @@
 #'
 #' Label Extreme Values
 #'
-#' A utility function which plots the sample names next to the sample points.
+#' *Internal function*. A utility function which plots the sample names next to the sample points.
 #' The number of samples labeled can be specified by passing it from the
 #' calling function. An internal function, not generally called by the user.
 #'
@@ -11,15 +11,14 @@
 #' @param names A character vector of sample names.  Length must match the
 #' number of rows in \code{x}.
 #'
-#' @template param-tol
+#' @param tol `.writeDoc_Tol()`
 #'
 #' @return None.  Annotates the plot with labels.
 #'
-#' @author Bryan A. Hanson (DePauw University), Tejasvi Gupta.
+#' @author `r .writeDoc_Authors(c("BH", "TG"))`
 #'
-#' @keywords utilities
+#' @keywords internal
 #' @export
-#' @noRd
 #'
 .labelExtremes <- function(data, names, tol) {
   List <- .getExtremeCoords(data, names, tol)

@@ -3,8 +3,7 @@
 #' This function permits you to change the color scheme of an existing
 #' \code{\link[ChemoSpec]{Spectra}} or \code{\link[ChemoSpec2D]{Spectra2D}} object.
 #'
-#' @param spectra An object of S3 class \code{\link[ChemoSpec]{Spectra}} or
-#' \code{\link[ChemoSpec2D]{Spectra2D}}.
+#' @param spectra `r .writeDoc_Spectra3()`
 #'
 #' @param new.cols A character vector giving the new color values, of
 #'   \code{length(unique(spectra$colors))}.
@@ -12,14 +11,13 @@
 #'
 #' @param silent Logical.  If \code{TRUE}, suppresses all reporting.
 #'
-#' @return spectra An updated object of S3 class \code{\link[ChemoSpec]{Spectra}} or
-#' \code{\link[ChemoSpec2D]{Spectra2D}}\code{\link[ChemoSpec2D]{Spectra2D}}.
+#' @return spectra `r .writeDoc_Spectra3()`
 #'
 #' @seealso For a discussion of general issues of color, see
 #' \code{colorSymbol}.
 #'
 #' @keywords utilities color
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #' @export
 #'
 #' @examples
@@ -40,6 +38,7 @@
 #'   newSpec <- conColScheme(MUD1) # reports old colors
 #'   newSpec <- conColScheme(MUD1, new = c("pink", "violet"))
 #' }
+#'
 conColScheme <- function(spectra, new.cols = NULL, silent = FALSE) {
   .chkArgs(mode = 0L)
   chkSpectra(spectra)

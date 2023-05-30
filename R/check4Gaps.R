@@ -1,7 +1,7 @@
 #'
 #' Check for Discontinuities (Gaps) in a Vector & Optionally Make a Plot
 #'
-#' The basic procedure is to compare x[n + 1] - x[n] for successive values of
+#' The basic procedure is to compare `x[n + 1] - x[n]` for successive values of
 #' n.  When this value jumps, there is a gap which is flagged. \code{beg.indx}
 #' and \code{end.indx} will always be contiguous as indices must be; it is the
 #' \code{x} values that jump or have the gap.  The indices are provided as they
@@ -38,7 +38,7 @@
 #'
 #' @seealso \code{\link{sumSpectra}} which make extensive use of this function.
 #'
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #'
 #' @keywords utilities
 #'
@@ -52,8 +52,8 @@
 #' gaps <- check4Gaps(x, tol = 0.11) # tol just larger than orig spacing
 #' gaps
 #' gaps <- check4Gaps(x, y, tol = 0.11) # show a plot if y given
-#' @export
 #'
+#' @export
 #' @importFrom graphics lines rect
 #'
 check4Gaps <- function(x, y = NULL, silent = FALSE, tol = NULL, ...) {

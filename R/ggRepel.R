@@ -1,17 +1,17 @@
 #'
 #' Wrapper for geom_text_repel
 #'
-#' Wrapper for \code{geom_text_repel} to make customization, modifcation
+#' *Internal function*. Wrapper for \code{geom_text_repel} to make customization, modifcation
 #' and maintenance easy.
 #'
 #' @param df Data frame, containing elements \code{x}, \code{y} and \code{label}.
 #' @return A geom that can be added to an existing plot.
 #'
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #' @importFrom ggrepel geom_text_repel
 #' @importFrom ggplot2 .pt
 #' @export
-#' @noRd
+#' @keywords internal
 #'
 .ggRepel <- function(df) {
   x <- y <- label <- NULL # satisfy CRAN check

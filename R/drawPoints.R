@@ -1,9 +1,18 @@
 #'
-#' Add Points to a Plot
+#' Add Points to a Score Plot
 #'
-#' @template authors-BH
+#' *Internal function.*
+#'
+#' @param PCs  Integer.  The PCs to plot.
+#' @param spectra `r .writeDoc_Spectra3()`
+#' @param case String. The type of data reduction that was done.
+#' @param use.sym  Logical.  Should symbols be used?
+#' @param \ldots `r .writeDoc_GraphicsDots()`
+#' @return None.  Side effect is a modifed plot.
+#'
+#' @author `r .writeDoc_Authors("BH")`
 #' @export
-#' @noRd
+#' @keywords internal
 #' @importFrom graphics plot
 #'
 

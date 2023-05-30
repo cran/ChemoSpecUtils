@@ -13,15 +13,14 @@
 #' grepping process is greedy, i.e. grepping for "XY" find not only "XY" but
 #' also "XYZ".
 #'
-#' @param spectra An object of S3 class \code{\link[ChemoSpec]{Spectra}} or
-#' \code{\link[ChemoSpec2D]{Spectra2D}}.
+#' @param spectra `r .writeDoc_Spectra3()`
 #'
 #' @param rem.sam Either an integer vector specifying the samples to be
 #'   removed, or a character vector (handled as a regex) giving the sample names to be removed.
 #'
-#' @return An object of S3 class \code{\link[ChemoSpec]{Spectra}} or \code{\link[ChemoSpec2D]{Spectra2D}}.
+#' @return `r .writeDoc_Spectra3()`
 #'
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #'
 #' @keywords utilities
 #'

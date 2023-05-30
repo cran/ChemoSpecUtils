@@ -1,7 +1,7 @@
 #'
 #' plotScores.Spectra2D
 #'
-#' @template authors-BH
+#' @author `r .writeDoc_Authors("BH")`
 #' @export
 #' @noRd
 #'
