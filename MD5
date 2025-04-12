@@ -1,6 +1,6 @@
-be9b36751b7fe94830323ebf724684af *DESCRIPTION
+bccc13e6da6d4382f84c0423d636d75e *DESCRIPTION
 7eab0a512d4580edc700ea063ab36c89 *NAMESPACE
-72561da7934d2f27afef390cf3318ff0 *NEWS.md
+719f4cdfcc5566b73e8dfe4b86e93ccd *NEWS.md
 511a77c88e5e3919120aaa905e403a7e *R/ChemoSpecUtils-package.R
 ce3e5bb1f479fa46a89007f9f6ee6f0d *R/GraphicsOptions.R
 c7a2aaf593a70713b0117ce97999ebcd *R/addEllipseInfo.R
@@ -56,7 +56,7 @@ ce17443c84673bebba04e3961f74a794 *R/removeSample.Spectra2D.R
 cc12d19cfd76025b0adf5d8646f8a5c9 *R/rowDist.R
 4f1c13f008e4aec31a6a21beacb3994f *R/sampleDist.R
 da891d70b7df55a462a9d17193352c5e *R/sampleDist.Spectra.R
-451000566cb169a43238e3833466a46b *R/sampleDist.Spectra2D.R
+8523e4fcce675519b59e06b11e95c581 *R/sampleDist.Spectra2D.R
 408d117857902c04469beabc0f5b9a4b *R/scorePlot.R
 d8a79803e9187b03c73c668666c76a78 *R/shrinkLeaf.R
 10d37f519606e3dc549646ad15473db2 *R/sumGroups.R
@@ -66,12 +66,12 @@ d8a79803e9187b03c73c668666c76a78 *R/shrinkLeaf.R
 ba294a87d3a62d42619f9875a4f378e4 *R/sumSpectra.Spectra.R
 981dec45a0c976212bca8ce969a8fe8a *R/sumSpectra.Spectra2D.R
 74fe481702f95878bde8e5eedee201a1 *R/updateGroups.R
-f61db891eb928123aba4412ca322f508 *build/partial.rdb
-49cd141b227784da0982c5f9a1951238 *data/Col12.RData
-53303633c9a7d107ea5025c18e71d192 *data/Col7.RData
-d3da39fdc7f0e8fe473e0f1bb5bc2318 *data/Col8.RData
-1fc468d7e7281d39bad1d7dfc8a04280 *data/Sym12.RData
-b9948c80f7d26907959d0904acdb4a79 *data/Sym8.RData
+b52aabe9a2757fc86742763db9dafc9b *build/partial.rdb
+6204a9d3560fcf99be903e6301ba6166 *data/Col12.RData
+943f098b9099d4e40fa6df5f12dafed5 *data/Col7.RData
+8644a9d1260bd572cbfaec570cb0d27c *data/Col8.RData
+c132aa03824737e67e92999a9d0fc274 *data/Sym12.RData
+630ab2ce1b57402405be6e8827779c80 *data/Sym8.RData
 5c130c6e2c0b2a32ae6cd2d919f1dc63 *inst/tinytest/create_test_data.R
 d5f49e31be6758be5788db598a71a71c *inst/tinytest/test-checkForPackageWithVersion.R
 5da454a1c2afeb4eaf212263bf4b30ab *inst/tinytest/test-chkArgs.R
